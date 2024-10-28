@@ -1,0 +1,48 @@
+
+	
+
+	public static void main(String[] args) {
+		int[] vet=new int[10];// criação de vetor
+		int[] vet2=new int[10];
+		
+		preenche(vet);// aciona chamada de função para preencheros vetores
+		mostra(vet);// aciona chamada de função para mostrar os vetores preenchidos em ordem
+		preenche(vet2);
+		mostra(vet2);
+		int[]vet3=soma(vet,vet2);
+		//System.out.println(maior(vet));// aciona chamada de função para mostrar o indice do maior vetor
+		mostra(vet3);
+
+
+	}
+	public static void preenche(int [] v) {
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<v.length;i++) {
+			v[i]=sc.nextInt();
+		}
+		
+	}
+	public static void mostra (int[]v) {
+		for(int i=0;i<v.length;i++) {
+			System.out.print(v[i]+" ");
+	}
+	System.out.println();
+}
+	public static int maior (int[]v) {
+		int maior=0;
+		for(int i=0;i<v.length;i++) {
+			if (v[i]>v[maior]) {
+				maior=i;	
+		}
+		
+	}
+	return maior;	
+}
+	public static int[] soma (int[]vv, int[]vw) {
+		int[] wv=new int[vv.length];
+		for(int i=0;i<vw.length;i++) {
+			wv[i]=vv[i]+vw[i];
+		}
+		return wv;
+	}
+}
