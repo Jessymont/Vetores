@@ -1,0 +1,43 @@
+package Aula;
+
+import java.util.Scanner;
+
+public class q5 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+		int[] vet=new int[5];// criação de vetor
+		//int[] vet2=new int[10];
+		int numero;
+		System.out.println("Digite um numero para verificar a repetiçao");
+		numero= sc.nextInt();
+		preenche(vet);// aciona chamada de função para preencheros vetores
+		mostra(vet);// aciona chamada de função para mostrar os vetores preenchidos em ordem
+		System.out.println("O numero " + numero+ " repete "+repet(vet, numero)+" vezes.");
+		//preenche(vet2);
+		//mostra(vet2);
+	
+	}
+	public static void preenche(int [] v) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Insira os numeros para preencher o vetor");
+		for(int i=0;i<v.length;i++) {
+			v[i]=sc.nextInt();
+		}
+	}	
+	public static void mostra (int[]v) {
+		for(int i=0;i<v.length;i++) {
+			System.out.print(v[i]+" ");
+	}
+	System.out.println();
+}
+	public static int repet (int[]v, int numero) {
+		int contador =0;
+		for(int i=0;i<v.length;i++) {
+			if (v[i]== numero) {
+				contador ++;
+			}
+		}
+		return contador;
+	}
+}
