@@ -16,7 +16,7 @@ public class Quest2 {
 	}
 	public static void preenche(int [] v) {
 		Scanner sc=new Scanner(System.in);
-		for(int i=0;i<v.length;i++) {
+		for(int i=0;i<v.length;i++) { // a propriedade length,retorna o número de posições (ou a capacidade) do array
 			v[i]=sc.nextInt();
 		}
 		
@@ -25,7 +25,8 @@ public class Quest2 {
 		for(int i=v.length-1;i>=0;i--) {
 			System.out.println(v[i]+" ");
 	}
-	System.out.println();
+	System.out.println();// é usado para garantir que, após exibir todos os elementos do array em uma única linha, 
+	//o próximo conteúdo a ser impresso fique na linha seguinte.
 }
 	
 
