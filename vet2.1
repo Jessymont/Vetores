@@ -1,0 +1,37 @@
+package Vetores;
+
+import java.util.Scanner;
+
+public class vetor1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int vetor;
+		System.out.println("Insira o tamanho do vetor");
+		vetor=sc.nextInt();
+		int[] vet=new int[vetor];
+		preenche(vet);
+		mostra(vet);
+				
+       sc.close();
+	}
+			
+		public static void preenche(int[] v) {
+			Scanner sc=new Scanner(System.in);
+			for(int i=0; i<v.length; i++) { // a propriedade length,retorna o número de posições (ou a capacidade) do array
+				System.out.print("Insira o número no vetor:  ");
+				v[i]=sc.nextInt();
+			}
+			sc.close();
+		}
+			
+		public static void mostra(int[] v) {
+			System.out.println("O vetor é composto por:");
+			for(int i=0; i<v.length; i++) {
+				System.out.print(v[i]+" ");
+			}
+			System.out.println();// é usado para garantir que, após exibir todos os elementos do array em uma única linha, 
+			//o próximo conteúdo a ser impresso fique na linha seguinte.
+		}
+
+	}
